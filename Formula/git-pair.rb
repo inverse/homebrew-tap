@@ -5,21 +5,21 @@
 class GitPair < Formula
   desc "A simple CLI app to make it easier for pairing for co-authoring commits"
   homepage "https://github.com/inverse/git-pair/"
-  version "0.1.5"
+  version "0.1.6"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/inverse/git-pair/releases/download/v0.1.5/git-pair_Darwin_x86_64.tar.gz"
-      sha256 "eef2bd193a946519138b1478fcc0784fd8108728ebd7fd0aa4090084ba1419aa"
+      url "https://github.com/inverse/git-pair/releases/download/v0.1.6/git-pair_Darwin_x86_64.tar.gz"
+      sha256 "823cf26639fcbca9ba97bde735f8b2678bfed896a3a25eaa8973acc9d2e586de"
 
       def install
         bin.install "git-pair"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/inverse/git-pair/releases/download/v0.1.5/git-pair_Darwin_arm64.tar.gz"
-      sha256 "8767316583b2824461cc9cba5e9824c1d6df057b13ea429630814a0608fb158c"
+      url "https://github.com/inverse/git-pair/releases/download/v0.1.6/git-pair_Darwin_arm64.tar.gz"
+      sha256 "8cc9b7753d72af70f8dd51d7b0e6ce325feabe0b7f8695ce2dca881835c45d74"
 
       def install
         bin.install "git-pair"
@@ -28,17 +28,17 @@ class GitPair < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/inverse/git-pair/releases/download/v0.1.5/git-pair_Linux_arm64.tar.gz"
-      sha256 "ba5196fb3b29b18624e583fc8a7d95e2dc22f0cc8e5209f5dbebf8a8e31ac49a"
+    if Hardware::CPU.intel?
+      url "https://github.com/inverse/git-pair/releases/download/v0.1.6/git-pair_Linux_x86_64.tar.gz"
+      sha256 "bd5f55c23f5c21893fc1213dfcba4160b1d8dae1389651c5a2116f086d8d839b"
 
       def install
         bin.install "git-pair"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/inverse/git-pair/releases/download/v0.1.5/git-pair_Linux_x86_64.tar.gz"
-      sha256 "38d13aabc81eddc2f24276b9a1769724d41be7956b09e1eca0a88fd617d33d25"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/inverse/git-pair/releases/download/v0.1.6/git-pair_Linux_arm64.tar.gz"
+      sha256 "9caff36fffee9eeb6181f19c1b3988b64143fa18c3fcb607f81a915a001a9812"
 
       def install
         bin.install "git-pair"
